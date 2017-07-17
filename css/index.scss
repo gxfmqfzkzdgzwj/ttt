@@ -1,0 +1,260 @@
+$white: #FFFFFF;
+$grey: #CCCCCC;
+$height: 100px;
+$black: #000000;
+@mixin box{
+    display: flex;
+    justify-content: space-between;
+}
+@mixin item{}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none; 
+    box-sizing: border-box;
+}
+.clearfix:before,.clearfix:after{
+       content:"";
+       display:table;
+       }
+.clearfix:after{clear:both;}
+.clearfix{zoom:1;}
+$width1: 100%;
+nav{
+    width: $width1;
+    height: 30px;
+    line-height: 30px;
+    background-color: $black;
+    color: $white;
+}
+$bottom: 10px;
+.pic{
+    width: $width1;
+    margin-bottom: $bottom;
+}
+
+@media screen and (min-width: 1024px){
+    .logo{
+        font-size: 16px;
+        font-weight: normal;
+        margin-left: 10px;  
+        float:left;      
+    }
+    .menu-bar{
+        margin-right: 10px;
+        float: right;
+        .menu{
+            margin: 0 5px;
+        }
+    }
+    .mobile{
+        display: none;
+    }
+    .group-left{
+        width: 59%;
+        float: left;
+    }
+    .group-right{
+        width:40%;
+        float: right;
+    }
+    .row1{
+        width: 100%;
+        @include box;
+        border-bottom: 2px solid $grey;
+    }
+    .block{
+        width:32%;
+        $width2: 100%;
+        position: relative;
+        padding-bottom: 20px;
+        box-sizing: border-box;
+        $height: 130px;
+        .pic1{
+            width: $width2;
+            height: 130px;
+        }
+        .mask{
+            width: $width2;
+            height: $height *0.5;
+            position: absolute;
+            top:  $height *0.5;
+            left: 0;
+            text-align: center;
+            padding-top: 10px;
+            box-sizing: border-box;
+            color: $white;
+            background-color: $black;
+            opacity: 0.7;
+        }
+    }
+    .vertical{
+        margin-top: 20px;
+        .row2{
+            @include box;
+            width: 100%;
+            margin-bottom: 10px;
+            .pic2{
+                $width3: 40%;
+                width: $width3;
+                height: $width3 * 0.7;
+            }
+            .right-content{
+                width: 57%;
+                padding: 0 10px;
+                box-sizing: border-box;
+            }
+        }
+    }
+    
+    .block2{
+        width: 100%;
+        position: relative;
+        $width4: 100%;
+        .pic3{
+            width: $width4;
+            height: 100px;
+        }
+        .mask2{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            color: $white;
+            text-align: center;
+            padding-top: 20px;
+            box-sizing: border-box;
+            .p1{
+                font-size: 16px;
+                font-weight: bold;
+            }
+            .p2{
+                font-size: 14px;
+            }
+        }
+    }
+    .time{
+        font-size: 12px;
+        color: $grey;
+    }
+    .footer1{
+        width:100%;
+        height: 100px;
+        color: $white;
+        text-align: center;
+        padding-top: 10px;
+        background-color: #666666;
+    }
+}
+@media screen and (max-width: 1024px ){
+    .pc{
+        display: none;
+    }
+    .logo{
+        text-align: center;
+        font-weight: normal;
+    }
+    .longPic{
+        width:100%;
+    }
+    .row1{
+        width: 100%;
+        @include box;
+        .block{
+            width:32%;
+            position: relative;
+            $height: 100px;
+            .pic1{
+                width: 100%;
+                height: $height;
+            }
+            .mask{
+                position: absolute;
+                top: $height/2;
+                left:0;
+                height: $height/2;
+                width: 100%;
+                text-align: center;
+                color: $white;
+                background-color: $black;
+                opacity: 0.7;
+                .p1{
+                    font-size:16px;
+                }
+                .p2{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .group-left{
+        width: 100%;
+    }
+    .block2{
+            width: 100%;
+            height: 100px;
+            position: relative;
+            .pic3{
+                width: 100%;
+                height: 100%;
+            }
+            .mask2{
+                width: 100%;
+                height: 100%;
+                color: $white;
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding-top: 10px;
+                box-sizing: border-box;
+                text-align: center;
+                color: $white;
+            }
+        }
+        
+        .has-border{
+            border: 1px solid #CCCCCC;
+            margin-bottom: 10px;
+            @include box;
+            flex-direction: row-reverse;
+            .pic2{
+                width: 35%;
+                height: 120px;
+                margin: 25px 10px;
+            }
+            .right-content{
+                margin: 15px 20px;
+            }
+        }
+        .has-border2{
+            @extend .has-border;
+            display:block;
+            flex-direction: row;
+            width: 100%;
+            h3{
+                //width: 100%;
+               margin-left: 20px;
+            }
+            .time{
+                margin-left: 20px;
+                color: #CCCCCC;
+                font-size: 12px;
+            }
+        }
+        .group-right{
+            width: 100%;
+        }
+        .footer2{
+            width: 100%;
+            padding: 0 30px;
+            box-sizing: border-box;
+            border: 1px solid #666666;
+            background-color: #CCCCCC;
+            @include box;
+            .menu{
+                margin: 20px 0;
+            }
+        }
+}

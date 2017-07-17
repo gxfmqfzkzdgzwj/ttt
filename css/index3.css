@@ -1,0 +1,165 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: none;
+	
+}
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table; 
+}
+.clearfix:after {
+  clear: both; 
+}
+.clearfix {
+  zoom: 1; 
+}
+nav{
+	background-color: #000000;
+	color: #FFFFFF;
+	display: flex;
+	justify-content:space-between;
+	height: 30px;
+	line-height: 30px;
+}
+.pic{
+	width: 100%;
+}
+.block{
+	width: 32%;
+	position: relative;
+}
+.row1{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #CCCCCC;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+.row2{
+	width: 100%;
+	display: flex;
+}
+.pic1{
+	width: 100%;
+}
+.mask{
+	width: 100%;
+	height: 65px;
+	color: #FFFFFF;
+    background-color: #000000;
+    opacity: 0.7;
+    text-align: center;
+    padding-top: 10px;
+	position: absolute;
+	top: 65px;
+	left: 0;
+}
+.block2{
+		width: 100%;
+		position: relative;
+	}
+.mask2{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	color: #FFFFFF;
+	text-align: center;
+	padding-top: 20px;
+}
+.p1{
+	font-size: 18px;
+}
+.pic3{
+	width: 100%;
+	height: 100px;
+}
+.time{
+		color: #666666;
+		font-size: 12px;
+	}
+@media only screen and (min-width: 1024px){
+	.mobile{
+		display: none;
+	}
+	.logo{
+		margin-left: 20px;
+	}
+	.menu-bar{
+		margin-right: 20px;
+	}
+	.menu{
+		margin: 0 5px;
+	}
+	.group-left{
+		width: 58%;
+		float: left;
+	}
+	.pic2{
+		width: 40%;
+		margin-bottom: 10px;
+		margin-right: 20px;
+	}
+	.right-content{
+		width: 60%;
+	}
+	.group-right{
+		width: 40%;
+		margin-top: 10px;
+		float: right;
+	}
+	.footer1{
+		width: 100%;
+		background-color: #666666;
+		color: #FFFFFF;
+		text-align: center;
+		height: 60px;
+		padding-top: 10px;
+	}
+}
+@media only screen and (min-width: 100px) and (max-width: 1024px){
+	.pc{
+		display: none;
+	}
+	.logo{
+		text-align: center;
+		margin: 0 auto;
+	}
+	.row2{
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		margin-top: 10px;
+		padding: 20px;
+		box-sizing: border-box;
+		border: 1px solid #CCCCCC;
+	}
+	.pic2{
+		width: 37%;
+		height: 150px;
+	}
+	.right-content{
+		width: 60%;
+	}
+	.has-border2{
+		margin-top: 10px;
+		padding: 20px;
+		box-sizing: border-box;
+		border: 1px solid #CCCCCC;
+	}
+	.footer2{
+		margin-top: 10px;
+		padding: 0 20px;
+		box-sizing: border-box;
+		background-color: #CCCCCC;
+		border: 1px solid #666666;
+		display: flex;
+		justify-content: space-between;
+		height: 50px;
+		line-height: 50px;
+	}
+}
